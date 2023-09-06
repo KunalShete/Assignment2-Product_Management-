@@ -1,0 +1,44 @@
+﻿@model List<ProductManagement.Models.DomainModel.ProductModel>
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "_LayoutUser";
+}
+
+<h2 >Products</h2>
+
+<style>
+    h2{
+    margin-top:10px;
+    margin-bottom:20px;
+        color: aliceblue;
+    }
+
+    .card-custom {
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+</style>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card card-custom text-center">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:black" >@product.Name</h5>
+                    <p class="card-text" style="color:black">Price: $@product.Price</p>
+                    
+                </div>
+            </div>
+        </div>
+    }
+</div>

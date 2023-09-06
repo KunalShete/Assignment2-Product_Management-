@@ -1,0 +1,33 @@
+﻿@model ProductManagement.Models.DomainModel.ProductModel
+
+@{
+    ViewData["Title"] = "Add Product";
+    Layout = "_LayoutAdmin";
+}
+
+<link rel="stylesheet" href="/css/LoginStyle.css">
+
+<div class="container">
+    <div class="login-box">
+        <h2>@ViewData["Title"]</h2>
+        <form asp-action="AddProduct" method="post" class="needs-validation" novalidate autocomplete="off">
+            <div class="user-box">
+                <input type="text" asp-for="Name" required="" class="form-control" />
+                <label>Product Name</label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="user-box">
+                <input type="text" asp-for="Price" required="" class="form-control" />
+                <label>Price</label>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Add Product
+            </button>
+        </form>
+    </div>
+</div>

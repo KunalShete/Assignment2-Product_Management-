@@ -1,0 +1,268 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProductManagement</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+
+    <style>
+
+        /* Navbar Starts Here */
+        .navbar {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            padding: 20px 120px;
+            justify-content: space-between;
+            align-items: center;
+            /*  position: fixed;
+                    top: 0;*/
+            z-index: 100;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            overflow: hidden;
+        }
+
+        .bgcolor {
+            transition: all 200ms ease-in-out;
+            background: var(--c-dark);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.36);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: 700;
+            transition: all 200ms ease-in-out;
+        }
+
+            .navbar .logo:hover {
+                background: var(--c-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+
+        .navbar .navLinks ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+
+        .navbar .navLinks .navLink {
+            transition: all 200ms;
+            font-weight: 600;
+            font-size: 20px;
+            transition: all 200ms ease-in-out;
+            
+        }
+
+            .navbar .navLinks .navLink:hover {
+                background: var(--c-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+        .navbar .burger {
+            display: none;
+        }
+
+
+        /* Footer Starts here */
+
+        .footer {
+            margin-top: 30px;
+            padding: 30px 120px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            background-color: #141727;
+            /*position:fixed;*/
+            bottom: 0;
+            width: 100%;
+            height:300px;
+    
+        }
+
+            .footer .title {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .footer .quicklinks,
+            .community,
+            .documents,
+            .Copyright {
+                display: flex;
+                flex-direction: column;
+                max-width: auto;
+                margin-right: 20px;
+                margin-bottom: 8px;
+            }
+
+            .footer .link {
+                margin-bottom: 8px;
+                transition: all 200ms ease-in-out;
+            }
+
+                .footer .link:hover {
+                    background: var(--c-gradient);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+            .footer .Copyright {
+                padding-top: 10px;
+            }
+
+
+
+
+        /* Footer Ends here */
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar Starts Here -->
+
+        <nav class="navbar">
+            <div class="logo">
+                <a class="navLink" asp-area="" asp-controller="Account" asp-action="Index">ProductM</a>
+            </div>
+            <div class="navLinks">
+
+
+                @if (SignInManager.IsSignedIn(User))
+                {
+
+                    <ul>
+                        <a class="navLink" asp-area="Identity" asp-controller="Account" asp-action="Index" title="Manage">Hello @User.Identity?.Name!</a>
+                        <form class="navLink" id="logoutForm" asp-area="Identity" asp-controller="Account" asp-action="Logout" method="post">
+                            <button type="submit" class="btn btn-link nav-link">Logout</button>
+                        </form>
+
+                    </ul>
+                }
+                else
+                {
+                    <ul>
+                        <a class="navLink" asp-area="" asp-controller="Account" asp-action="Index">Home</a>
+                        <a class="navLink" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                        <a class="navLink" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+
+                    </ul>
+
+                    <div class="burger">
+                        <span class="material-icons">
+                            menu
+                        </span>
+                    </div>
+
+                }
+            </div>
+
+
+        </nav>
+
+        <!-- Navbar Ends Here -->
+
+
+
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+
+
+    <!-- Footer Starts here -->
+    <footer class="footer section">
+        <div class="quicklinks">
+            <h2 class="title">
+                Quick Links
+            </h2>
+            <a href="#features" class="link">
+                Features
+            </a>
+            <a href="#Apps" class="link">
+                App
+            </a>
+            <a href="#security" class="link">
+                Security
+            </a>
+            <a href="#Team" class="link">
+                Team
+            </a>
+
+        </div>
+
+        <div class="community">
+            <h2 class="title">
+                Community
+            </h2>
+            <a href="" class="link">
+                Twitter
+            </a>
+            <a href="" class="link">
+                Instagram
+            </a>
+            <a href="" class="link">
+                Facebook
+            </a>
+            <a href="" class="link">
+                Telegram
+            </a>
+
+        </div>
+
+        <div class="documents">
+            <h2 class="title">
+                Documents
+            </h2>
+            <a href="" class="link">
+                Privacy Policy
+            </a>
+            <a href="" class="link">
+                Terms and Conditions
+            </a>
+            <a href="" class="link">
+                Legal Terms
+            </a>
+
+        </div>
+
+        <div class="Copyright">
+            &#169 GetLinked
+            <script>document.write(new Date().getFullYear());</script><br> All Rights Reserved.
+        </div>
+
+
+
+
+
+    </footer>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,75 @@
+﻿@model List<ProductManagement.Models.ViewModel.AdminDashboardViewModel>
+@{
+    ViewData["Title"] = "Super Dashboard";
+    Layout = "_LayoutAdmin";
+}
+
+<style>
+    /* Center the container horizontally and vertically */
+    .center-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Make the container take up the full viewport height */
+        color: white; /* Set text color to white */
+    }
+    h2{
+        color: white;
+        margin-bottom:40px;
+    }
+    /* Add white text color to table headers */
+    .table th {
+        color: white;
+    }
+
+    /* Add white text color to links */
+    .edit-btn {
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+        margin-right: 5px;
+    }
+
+    .delete-btn {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+    td{
+        color: white;
+    }
+</style>
+
+<div class="center-container">
+    <h2>Admin User Management</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var User in Model)
+            {
+                <tr>
+                    <td>@User.Name</td>
+                    <td>@User.Email</td>
+                    <td>
+                        <a asp-action="EditUser" asp-route-id="@User.Id" class="edit-btn btn-info">Edit</a>
+                        <a asp-action="DeleteUser" asp-route-id="@User.Id" class="delete-btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

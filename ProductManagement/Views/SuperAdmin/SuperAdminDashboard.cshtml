@@ -1,0 +1,90 @@
+﻿@model List<ProductManagement.Models.ViewModel.SuperAdminDashboardViewModel>
+@{
+    ViewData["Title"] = "Super Dashboard";
+    Layout = "_LayoutSuperAdmin";
+}
+
+<head>
+
+    <style>
+        .main {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+           
+           
+        }
+
+    
+
+        h2 {
+            margin-top: 30px;
+            color: aliceblue;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+       
+        .btn-round {
+            border-radius: 20px;
+        }
+
+        table {
+            border-color: 2px solid white;
+            border-collapse: collapse;
+            width: 80%; /* Adjust table width as needed */
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid white; /* Set border color for table header and cells */
+            text-align: center;
+        }
+
+        tr{
+            color:aliceblue;
+        }
+
+        tr:nth-child(even) {
+            background-color: dimgrey; /* Set background color for even rows */
+        }
+
+    </style>
+
+</head>
+
+
+<div class="main">
+    <h2>Super Admin Dashboard</h2>
+
+        <a asp-action="AddAdmin" class="btn btn-info mb-4">Add Admin</a>
+</div>
+
+
+
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var adminUser in Model)
+        {
+            <tr>
+                
+                <td>@adminUser.Email</td>
+                <td>
+                    <a asp-action="EditAdmin" asp-route-id="@adminUser.Id" class="btn btn-info btn-round">Edit</a>
+                    <a asp-action="DeleteAdmin" asp-route-id="@adminUser.Id" class="btn btn-danger btn-round">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

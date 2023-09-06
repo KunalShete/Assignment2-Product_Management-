@@ -1,0 +1,40 @@
+﻿@model ProductManagement.Models.ViewModel.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register Page";
+}
+
+<link rel="stylesheet" href="/css/LoginStyle.css"> <!-- Use the same CSS as the login page -->
+
+
+<div class="containerRegister " style="display:flex; align-items:center; justify-content:center; margin-top:170px;margin-left:150px;">
+    <div class="login-box">
+        <h2>Register</h2>
+        <form asp-action="Register" method="post" class="needs-validation" novalidate autocomplete="off">
+            <div class="user-box">
+                <input type="text" asp-for="UserName" required="" />
+                <label>Name</label>
+            </div>
+            <div class="user-box">
+                <input type="email" asp-for="Email" required="" />
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" asp-for="Password" required="" />
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input type="password" asp-for="ConfirmPassword" required="" />
+                <label>Confirm Password</label>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Register
+            </button>
+        </form>
+    </div>
+</div>
+
