@@ -55,23 +55,16 @@ namespace ProductManagement.Data.Repositories.UserCrud
             return null;
         }
 
+
         public void EditUser(AddUserViewModel user)
         {
-            var identityUser = _userManager.FindByIdAsync(user.Id).Result;
-
-            if (identityUser != null)
+            var existingUser = _userManager.Users.FirstOrDefault(p => p.Id == user.Id);
+            if (existingUser != null)
             {
-                identityUser.Email = user.Email;
+                existingUser.Email = user.Email;
 
-                var result = _userManager.UpdateAsync(identityUser).Result;
-
-                if (!result.Succeeded)
-                {
-                    foreach (var item in result.Errors)
-                    {
-                        Console.WriteLine($"Error: {item.Description}");
-                    }
-                }
+                // Update other properties as needed
+               _userManager.UpdateAsync(existingUser);
             }
         }
         public void DeleteUser(string id)

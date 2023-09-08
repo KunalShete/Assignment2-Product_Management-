@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ProductManagement.Data.Repositories.SuperAdmin;
 using ProductManagement.Models.ViewModel;
 
 namespace ProductManagement.Controllers
@@ -85,5 +87,37 @@ namespace ProductManagement.Controllers
             return RedirectToAction("SuperAdminDashboard");
         }
 
+
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> UserDashboard()
+        {
+            var users = await _superAdminService.GetUsersAsync();
+            return View(users);
+        }
+        
+
+        //Make user as admin
+        [HttpPost]
+        public async Task<IActionResult> PromoteToAdmin(string userId)
+        {
+            var result = await _superAdminService.PromoteUserToAdminAsync(userId);
+            if (result)
+            {
+                return RedirectToAction("SuperAdminDashboard");
+            }
+
+            ModelState.AddModelError(string.Empty, "Failed to promote user to admin.");
+            return RedirectToAction("SuperAdminDashboard");
+        }
+
+
+
+
     }
+
+
 }

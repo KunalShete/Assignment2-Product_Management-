@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj": {}
+    "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj": {}
   },
   "projects": {
-    "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj": {
+    "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj",
         "projectName": "ProductManagement",
-        "projectPath": "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj",
+        "projectPath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj",
         "packagesPath": "C:\\Users\\Kunal.shete\\.nuget\\packages\\",
-        "outputPath": "E:\\MAIN\\Assignment3(2)\\ProductManagement\\obj\\",
+        "outputPath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kunal.shete\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[6.0.16, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.16, )"
@@ -58,6 +62,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

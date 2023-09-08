@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oc3Ab20vh1mNRweXea7AUk/vW9QQ8BP+f0AL1Mtt92ZC4af4hfxDujW5ys2ubuQNVrrb0eEK8uGOUB+vDPw3fQ==",
+  "dgSpecHash": "OweETWTm8nfBfO7aDW99EIWDVb83xnm/OJqo72i2ZdeV8y8fWs/FSTRLtzhZRoCiFXjdwN01imG2A7xIt1608Q==",
   "success": true,
-  "projectFilePath": "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj",
+  "projectFilePath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -84,6 +84,7 @@
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.16\\microsoft.entityframeworkcore.abstractions.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.16\\microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.16\\microsoft.entityframeworkcore.design.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.0\\microsoft.entityframeworkcore.inmemory.6.0.0.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.16\\microsoft.entityframeworkcore.relational.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.16\\microsoft.entityframeworkcore.sqlserver.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.16\\microsoft.entityframeworkcore.tools.6.0.16.nupkg.sha512",

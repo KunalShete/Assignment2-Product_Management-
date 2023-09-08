@@ -12,39 +12,34 @@
         flex-direction: column; /* Stack elements vertically */
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Make the container take up the full viewport height */
-        color: white; /* Set text color to white */
+        height: 100vh; 
+        color: white; 
     }
 
-    /* Style table */
     .table {
-        width: 80%; /* Adjust table width as needed */
+        width: 80%; 
         margin-bottom: 30px;
     }
 
-    /* Style heading */
+  
     h2 {
         color: aliceblue;
         margin-bottom: 70px;
     }
 
-    /* Set white text color for links */
     a {
         color: white;
     }
 
-    /* Style table header cells */
     th {
         color: white;
         font-weight: 800;
     }
 
-    /* Set white text color for table data cells */
     td {
         color: white;
     }
 
-    /* Style buttons */
     .edit-btn {
         background-color: #17a2b8;
         color: white;
@@ -68,7 +63,7 @@
 <div class="center-container">
     <h2>@ViewData["Title"]</h2>
 
-    <table class="table">
+    <table class="table" aria-describedby="mydesc">
         <thead>
             <tr>
                 <th>Product Name</th>

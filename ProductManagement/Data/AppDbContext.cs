@@ -12,12 +12,9 @@ namespace ProductManagement.Data
         {
             
         }
+       
+
         public DbSet<ProductModel> Products { get; set; }
 
-       
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-        }
     }
 }

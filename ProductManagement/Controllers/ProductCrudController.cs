@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
 using ProductManagement.Data.Repositories;
 using ProductManagement.Data.Repositories.ProductCrud;
 using ProductManagement.Models.DomainModel;
@@ -9,6 +10,7 @@ using System;
 using System.Buffers;
 using System.Data;
 using System.Security.Claims;
+using Xunit;
 
 namespace ProductManagement.Controllers
 {
@@ -83,6 +85,7 @@ namespace ProductManagement.Controllers
             }
           
         }
+
     }
 
 }

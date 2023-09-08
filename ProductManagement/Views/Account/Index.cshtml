@@ -5,8 +5,6 @@
 <link rel="stylesheet" href="/css/Button.css">
 
 <style>
-
-
     .right h1 {
         font-size: 3rem;
         margin-bottom: 20px;
@@ -19,45 +17,56 @@
         color: #f6f6f6;
     }
 
-
-
-
-
-
-
     a {
         text-decoration: inherit;
         color: inherit;
         cursor: auto;
     }
 
-
-
     .container {
-        /*margin-top:80px;*/
-
         display: flex;
-        gap: 40px;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
         z-index: 20;
     }
 
+    .left img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    @@media screen and (min-width: 768px) {
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .left {
+            flex-basis: 50%;
+        }
+
+        .right {
+            flex-basis: 50%;
+        }
+    }
 </style>
 
 <div class="container section">
     <div class="left">
         <div class="image">
-            <img src="./Images/undraw_product_iteration_kjok-removebg-preview.png" width="500" />
+            <img src="./Images/undraw_product_iteration_kjok-removebg-preview.png" width="500" alt="image" />
         </div>
     </div>
     <div class="right">
         <h1>Welcome to the Product Management System</h1>
-        <p>Effortlessly manage your products, all in one place.Log in or register to get started on your journey.</p>
+        <p>Effortlessly manage your products, all in one place. Log in or register to get started on your journey.</p>
 
-        @* <a href="@Url.Action("Login", "Account")" class="button">
-        Log In
-        </a>*@
         <div class="buttons">
             <a href="@Url.Action("Login", "Account")" class="button">
                 <span></span>
@@ -75,9 +84,5 @@
                 Register
             </a>
         </div>
-
-
-
-
     </div>
 </div>

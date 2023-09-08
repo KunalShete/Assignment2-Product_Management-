@@ -2,10 +2,8 @@ using ProductManagement.Controllers;
 using ProductManagement.Models.DomainModel;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
-
-
-
- 
+using ProductManagement.Data.Repositories.ProductCrud;
+using ProductManagement.Data.Repositories.Account;
 
 namespace ProductCrudControllerTest
 {
@@ -146,6 +144,61 @@ namespace ProductCrudControllerTest
             Assert.Equal("AllProducts", result.ActionName);
 
             productServiceMock.Verify(service => service.DeleteProduct(productId), Times.Once);
+        }
+
+
+        [Fact]
+        public void TestAddProductAction()
+        {
+            var mockAccountService = new Mock<IProductService>();
+            var controller = new ProductCrudController(mockAccountService.Object);
+
+
+
+            // Act
+            var result = controller.AddProduct() as ViewResult;
+
+
+
+            // Assert
+            Assert.NotNull(result);
+
+        }
+
+
+        [Fact]
+        public void EditProduct_ValidModelState_RedirectsToAllProducts()
+        {
+            // Arrange
+            var productServiceMock = new Mock<IProductService>();
+            var controller = new ProductCrudController(productServiceMock.Object);
+            var validProductModel = new ProductModel { Id = Guid.NewGuid(), Name = "Updated Product", Price = 12 };
+
+            // Act
+            var result = controller.EditProduct(validProductModel) as RedirectToActionResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal("AllProducts", result.ActionName);
+            productServiceMock.Verify(s => s.UpdateProduct(validProductModel), Times.Once);
+        }
+
+        [Fact]
+        public void EditProduct_InvalidModelState_ReturnsView()
+        {
+            // Arrange
+            var productServiceMock = new Mock<IProductService>();
+            var controller = new ProductCrudController(productServiceMock.Object);
+            controller.ModelState.AddModelError("Name", "Name is required");
+            var invalidProductModel = new ProductModel { Id = Guid.NewGuid(), Name = null, Price = 12 };
+
+            // Act
+            var result = controller.EditProduct(invalidProductModel) as ViewResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(invalidProductModel, result.Model);
+            productServiceMock.Verify(s => s.UpdateProduct(It.IsAny<ProductModel>()), Times.Never);
         }
 
     }

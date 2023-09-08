@@ -5,25 +5,23 @@
 }
 
 <style>
-    /* Center the container horizontally and vertically */
+    
     .center-container {
         display: flex;
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Make the container take up the full viewport height */
-        color: white; /* Set text color to white */
+        height: 100vh; 
+        color: white; 
     }
     h2{
         color: white;
         margin-bottom:40px;
     }
-    /* Add white text color to table headers */
     .table th {
         color: white;
     }
 
-    /* Add white text color to links */
     .edit-btn {
         background-color: #17a2b8;
         color: white;
@@ -50,7 +48,7 @@
 <div class="center-container">
     <h2>Admin User Management</h2>
 
-    <table class="table">
+    <table class="table" aria-describedby="mydesc">
         <thead>
             <tr>
                 <th>Name</th>

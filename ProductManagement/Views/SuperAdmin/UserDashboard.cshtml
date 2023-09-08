@@ -1,0 +1,92 @@
+﻿@model IEnumerable<IdentityUser>
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Super Dashboard";
+    Layout = "_LayoutSuperAdmin";
+}
+
+<head>
+    <style>
+        
+        .table-custom {
+            font-size: 20px;
+            border-collapse: collapse;
+            width: 1000px;
+            margin-top: 1px;
+        }
+
+            .table-custom th, .table-custom td {
+                padding: 10px;
+                border-bottom: 1px solid white; 
+                text-align: center;
+                color: aliceblue; 
+            }
+
+            .table-custom th {
+                background-color: #f6f6f6;
+                color: #333;
+            }
+
+        
+        .btn-custom {
+            font-size: 16px; 
+            border-radius: 20px;
+            background-color: #1F9BCF; 
+            color: #fff; 
+            padding: 6px 12px; 
+        }
+
+     
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <div class="row pt-4">
+        <h2 style="color:aliceblue">User List</h2>
+    </div>
+    <br /><br />
+
+    <div class="table-responsive">
+       
+        <table class="table table-custom">
+            <thead class="text-center">
+                <tr>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td class="align-middle text-white">
+                            @user.Email
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <form asp-controller="SuperAdmin" asp-action="PromoteToAdmin" method="post">
+                                    <input type="hidden" name="userId" value="@user.Id" />
+                                    <button type="submit" class="btn btn-primary mx-2 btn-custom">
+                                        Make Admin
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

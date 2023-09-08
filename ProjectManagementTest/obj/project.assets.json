@@ -1381,6 +1381,22 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.16": {
         "type": "package",
         "dependencies": {
@@ -1572,6 +1588,7 @@
           }
         },
         "build": {
+          "build/Microsoft.Extensions.Logging.Abstractions.targets": {},
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
@@ -4259,7 +4276,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.16",
           "Microsoft.EntityFrameworkCore": "6.0.16",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.16",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
           "Moq": "4.20.69",
           "SendGrid": "9.28.1",
@@ -6035,6 +6055,20 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/6.0.0": {
+      "sha512": "WJmphvCn0wue9AX+Wvqj3XZ3ehNi9oyYBFNLtHVNvKqZrcimXBOqLo5RNf1fJWYSLWhOia/vzG4JtkAeZxZ8FQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.6.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.16": {
@@ -11859,6 +11893,9 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.EntityFrameworkCore.InMemory >= 6.0.0",
+      "Microsoft.Extensions.Logging.Abstractions >= 6.0.0",
+      "Microsoft.Extensions.Options >= 6.0.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "ProductManagement >= 1.0.0",
       "coverlet.collector >= 3.2.0",
@@ -11872,11 +11909,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MAIN\\Assignment3(2)\\ProjectManagementTest\\ProjectManagementTest.csproj",
+      "projectUniqueName": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProjectManagementTest\\ProjectManagementTest.csproj",
       "projectName": "ProjectManagementTest",
-      "projectPath": "E:\\MAIN\\Assignment3(2)\\ProjectManagementTest\\ProjectManagementTest.csproj",
+      "projectPath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProjectManagementTest\\ProjectManagementTest.csproj",
       "packagesPath": "C:\\Users\\Kunal.shete\\.nuget\\packages\\",
-      "outputPath": "E:\\MAIN\\Assignment3(2)\\ProjectManagementTest\\obj\\",
+      "outputPath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProjectManagementTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kunal.shete\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11893,8 +11930,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj": {
-              "projectPath": "E:\\MAIN\\Assignment3(2)\\ProductManagement\\ProductManagement.csproj"
+            "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj": {
+              "projectPath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProductManagement\\ProductManagement.csproj"
             }
           }
         }
@@ -11909,6 +11946,18 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Microsoft.Extensions.Logging.Abstractions": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Microsoft.Extensions.Options": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.5.0, )"

@@ -2,15 +2,94 @@
 using Microsoft.AspNetCore.Mvc;
 using ProductManagement.Models.ViewModel;
 using Moq;
-
-
+using ProductManagement.Data.Repositories.Account;
+using ProductManagement.Controllers;
 
 namespace AccountControllerTest
 {
     public class AccountControllerTest
     {
 
-            [Fact]
+
+        [Fact]
+        public void TestLoginAction()
+        {
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+
+
+            // Act
+            var result = controller.Login() as ViewResult;
+
+
+
+            // Assert
+            Assert.NotNull(result);
+
+        }
+
+
+        [Fact]
+        public void TestRegisterAction()
+        {
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+
+
+            // Act
+            var result = controller.Register() as ViewResult;
+
+
+
+            // Assert
+            Assert.NotNull(result);
+
+        }
+
+
+        [Fact]
+        public void TestAccessDeniedAction()
+        {
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+
+
+            // Act
+            var result = controller.AccessDenied() as ViewResult;
+
+
+
+            // Assert
+            Assert.NotNull(result);
+
+        }
+
+
+
+        [Fact]
+        public void TestIndexAction()
+        {
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+
+
+            // Act
+            var result = controller.Index() as ViewResult;
+
+
+
+            // Assert
+            Assert.NotNull(result);
+
+        }
+
+
+
+        [Fact]
             public async Task Login_ValidModel_RedirectsToDashboard()
             {
                 // Arrange

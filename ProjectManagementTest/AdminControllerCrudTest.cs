@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ProductManagement.Controllers;
+using ProductManagement.Data.Repositories.UserCrud;
 using ProductManagement.Models.ViewModel;
 
 using Xunit;

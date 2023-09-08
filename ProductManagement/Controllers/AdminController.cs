@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ProductManagement.Data.Repositories.UserCrud;
 using ProductManagement.Models.ViewModel;
 using System.Threading.Tasks;
 
@@ -21,6 +22,8 @@ namespace ProductManagement.Controllers
             var adminUserViewModels = _userService.GetAdminUsers();
             return View(adminUserViewModels);
         }
+
+ 
 
         public IActionResult AdminDashboard()
         {
@@ -44,6 +47,7 @@ namespace ProductManagement.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public IActionResult EditUser(string id)
         {
             var model = _userService.GetUserById(id);
@@ -59,16 +63,13 @@ namespace ProductManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new AddUserViewModel
-                {
-                    Id = model.Id,
-                    Email = model.Email,
-                };
                 _userService.EditUser(model);
                 return RedirectToAction("ViewUser");
             }
             return View(model);
         }
+
+
 
         public IActionResult DeleteUser(string id)
         {

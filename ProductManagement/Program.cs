@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using ProductManagement.Data.Repositories.ProductCrud;
 using ProductManagement.Data.Repositories.UserCrud;
 using ProductManagement.Data.Repositories.Account;
+using ProductManagement.Data.Repositories.SuperAdmin;
+using ProductManagement.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 builder.Services.AddAuthentication();
 builder.Services.AddControllersWithViews();
@@ -22,12 +22,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-// Add UserManager and SignInManager to DI container
-/*builder.Services.AddScoped<UserManager<IdentityUser>>();
-builder.Services.AddScoped<SignInManager<IdentityUser>>();*/
 
-
-// Configure the authorization policies
 
 builder.Services.AddAuthorization(options =>
 {
@@ -35,6 +30,7 @@ builder.Services.AddAuthorization(options =>
         policy.RequireRole("SuperAdmin"));
 });
 
+/*builder.Services.AddScoped<IProductRepository, ProductRepository>();*/
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
@@ -48,7 +44,6 @@ using (var scope = app.Services.CreateScope())
     SeedData.Initialize(serviceProvider).Wait();
 }
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -76,7 +71,7 @@ app.MapControllerRoute(
     pattern: "{controller=SuperAdmin}/{action=SuperAdminDashboard}/{id?}");
 app.MapControllerRoute(
     name: "User",
-    pattern: "{controller=User}/{action=USerDashboard}/{id?}");
+    pattern: "{controller=User}/{action=UserDashboard}/{id?}");
 
 
 app.Run();

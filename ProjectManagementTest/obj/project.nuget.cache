@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XfypSM8sA/EtsWWBNW2Qu4/BJIo5KfP6wonKJe0qlTddAAE7pHMLUKEssA3Wo1JhZX+epWh8NgleNTKoUpDOWg==",
+  "dgSpecHash": "ZNWUKNBZ7mdEzSn03hGhX6aDNmboqWWI/+Eg0Y85RBLVSiuHlSoZrA3LevsdqnXUdaoP+hQzNSjpEJHTQZGtnA==",
   "success": true,
-  "projectFilePath": "E:\\MAIN\\Assignment3(2)\\ProjectManagementTest\\ProjectManagementTest.csproj",
+  "projectFilePath": "C:\\Users\\Kunal.shete\\Desktop\\Assignment2(Product_Management)\\ProjectManagementTest\\ProjectManagementTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
@@ -85,6 +85,7 @@
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.16\\microsoft.entityframeworkcore.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.16\\microsoft.entityframeworkcore.abstractions.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.16\\microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.0\\microsoft.entityframeworkcore.inmemory.6.0.0.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.16\\microsoft.entityframeworkcore.relational.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.16\\microsoft.entityframeworkcore.sqlserver.6.0.16.nupkg.sha512",
     "C:\\Users\\Kunal.shete\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",

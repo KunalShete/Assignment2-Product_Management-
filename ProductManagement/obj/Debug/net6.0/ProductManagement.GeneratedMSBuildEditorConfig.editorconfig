@@ -9,109 +9,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProductManagement
 build_property.RootNamespace = ProductManagement
-build_property.ProjectDir = E:\MAIN\Assignment3(2)\ProductManagement\
+build_property.ProjectDir = C:\Users\Kunal.shete\Desktop\Assignment2(Product_Management)\ProductManagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\MAIN\Assignment3(2)\ProductManagement
+build_property.MSBuildProjectDirectory = C:\Users\Kunal.shete\Desktop\Assignment2(Product_Management)\ProductManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Account/AccessDenied.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Account/Index.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Account/Login.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Account/Privacy.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Account/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Account/Register.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Admin/AddUser.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Admin/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Admin/AdminDashboard.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Admin/AdminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Admin/EditUser.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Admin/EditUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Admin/ViewUser.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Admin/ViewUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1VzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/ProductCrud/AddProduct.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/ProductCrud/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENydWRcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/ProductCrud/AllProducts.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/ProductCrud/AllProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENydWRcQWxsUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/ProductCrud/UpdateProduct.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/ProductCrud/UpdateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENydWRcVXBkYXRlUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Shared/Error.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Shared/_LayoutAdmin.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Shared/_LayoutSuperAdmin.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Shared/_LayoutSuperAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTdXBlckFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Shared/_LayoutUser.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Shared/_LayoutUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/SuperAdmin/AddAdmin.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/SuperAdmin/AddAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJBZG1pblxBZGRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/SuperAdmin/EditAdmin.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/SuperAdmin/EditAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJBZG1pblxFZGl0QWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/SuperAdmin/SuperAdminDashboard.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/SuperAdmin/SuperAdminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJBZG1pblxTdXBlckFkbWluRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/User/UserDashboard.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/SuperAdmin/UserDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJBZG1pblxVc2VyRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/User/UserDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/User/ViewProducts.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/User/ViewProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3UHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/_ViewImports.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/_ViewStart.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/MAIN/Assignment3(2)/ProductManagement/Views/Shared/_Layout.cshtml]
+[C:/Users/Kunal.shete/Desktop/Assignment2(Product_Management)/ProductManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0cpmsnyzpj
