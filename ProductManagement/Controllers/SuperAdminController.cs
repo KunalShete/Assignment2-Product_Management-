@@ -100,7 +100,6 @@ namespace ProductManagement.Controllers
         }
         
 
-        //Make user as admin
         [HttpPost]
         public async Task<IActionResult> PromoteToAdmin(string userId)
         {

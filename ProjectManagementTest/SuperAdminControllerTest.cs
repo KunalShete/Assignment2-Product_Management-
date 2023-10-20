@@ -1,22 +1,15 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ProductManagement.Controllers;
 using ProductManagement.Models.ViewModel;
-using Xunit;
 using Microsoft.AspNetCore.Identity;
 using ProductManagement.Data.Repositories.SuperAdmin;
-using ProductManagement.Data.Repositories.Account;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+
 
 namespace SuperAdminControllerTest
 {
         public class SuperAdminControllerTest
         {
-
-
-
 
         [Fact]
         public void TestAddAdminAction()
@@ -24,12 +17,8 @@ namespace SuperAdminControllerTest
             var mockAccountService = new Mock<ISuperAdminService>();
             var controller = new SuperAdminController(mockAccountService.Object);
 
-
-
             // Act
             var result = controller.AddAdmin() as ViewResult;
-
-
 
             // Assert
             Assert.NotNull(result);
@@ -121,34 +110,7 @@ namespace SuperAdminControllerTest
         }
 
 
-    /*    [Fact]
-        public async Task UserDashboard_ReturnsViewWithUsers()
-        {
-            // Arrange
-            var users = new List<IdentityUser>
-            {
-                new IdentityUser { Id = "1", Email = "user1@example.com" },
-                new IdentityUser { Id = "2", Email = "user2@example.com" }
-            };
-
-            var superAdminServiceMock = new Mock<ISuperAdminService>();
-            superAdminServiceMock.Setup(s => s.GetUsersAsync()).ReturnsAsync(users);
-
-            var controller = new SuperAdminController(superAdminServiceMock.Object);
-
-            // Act
-            var result = await controller.UserDashboard() as ViewResult;
-          //  var model = result.ViewData.Model as List<IdentityUser>;
-
-            // Assert
-            Assert.IsType<List<SuperAdminDashboardViewModel>>(result.Model);
-
-            var model = result.Model as List<SuperAdminDashboardViewModel>;
-            Assert.NotNull(model);
-            Assert.Equal(users.Count, model.Count); // Assert the number of users
-            Assert.Equal("UserDashboard", result.ViewName);
-        }*/
-
+ 
 
         [Fact]
         public void SuperAdminDashboard()

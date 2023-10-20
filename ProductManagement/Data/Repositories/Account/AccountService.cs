@@ -73,7 +73,7 @@ namespace ProductManagement.Data.Repositories.Account
 
         public async Task SignOutAsync()
         {
-            // Your logout logic here
+          
             await _signInManager.SignOutAsync();
         }
 

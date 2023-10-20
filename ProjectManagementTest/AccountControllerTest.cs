@@ -205,7 +205,7 @@ namespace AccountControllerTest
 
             //Logout
             [Fact]
-            public async Task Logout_RedirectsToLogin()
+            public async Task LogoutRedirectsToLogin()
             {
                 // Arrange
                 var mockAccountService = new Mock<IAccountService>();
@@ -219,5 +219,159 @@ namespace AccountControllerTest
                 Assert.Equal("Login", result.ActionName);
                 Assert.Equal("Account", result.ControllerName);
             }
+
+        /*--------------------------------------------------------------------*/
+
+        [Fact]
+        public async Task Login_RedirectsToUserDashboardForValidCredentials()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+            var user = new IdentityUser { UserName = "test@example.com" };
+            var loginModel = new LoginViewModel
+            {
+                Email = "test@example.com",
+                Password = "password",
+                RememberMe = false
+            };
+
+            mockAccountService.Setup(service => service.LoginAsync(loginModel.Email, loginModel))
+                .ReturnsAsync((true, new List<string> { "User" }));
+
+            mockAccountService.Setup(service => service.GetUserByEmailAsync(loginModel.Email))
+                .ReturnsAsync(user);
+
+            // Act
+            var result = await controller.Login(loginModel) as RedirectToActionResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal("UserDashboard", result.ActionName);
+            Assert.Equal("User", result.ControllerName);
         }
+
+        [Fact]
+        public async Task Login_ReturnsViewWithErrorForInvalidCredentials()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+            var loginModel = new LoginViewModel
+            {
+                Email = "invalid@example.com",
+                Password = "invalidpassword",
+                RememberMe = false
+            };
+
+            
+            mockAccountService.Setup(service => service.LoginAsync(loginModel.Email, loginModel))
+                .ReturnsAsync((false, new List<string>()));
+
+            // Act
+            var result = await controller.Login(loginModel) as ViewResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.False(controller.ModelState.IsValid);
+            Assert.Contains("Please enter valid details", controller.ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+        }
+
+        [Fact]
+        public async Task Logout_RedirectsToLogin()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+            // Act
+            var result = await controller.Logout() as RedirectToActionResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal("Login", result.ActionName);
+            Assert.Equal("Account", result.ControllerName);
+        }
+
+
+        [Fact]
+        public async Task LogoutRedirectsToRegister()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+            // Act
+            var result = await controller.Logout() as RedirectToActionResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal("Login", result.ActionName);
+            Assert.Equal("Account", result.ControllerName);
+        }
+
+        [Fact]
+        public async Task Logout_CallsSignOutAsync()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+            // Act
+            await controller.Logout();
+
+            // Assert
+            mockAccountService.Verify(service => service.SignOutAsync(), Times.Once);
+        }
+
+
+
+    
+    
+
+        [Fact]
+        public async Task Register_ReturnsViewWithErrorForInvalidModel()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+            var registerModel = new RegisterViewModel
+            {
+                Email = "invalidemail", 
+                Password = "password",
+                ConfirmPassword = "password"
+            };
+
+           
+            var errorDescription = "Email is not in the correct format.";
+            mockAccountService.Setup(service => service.RegisterAsync(registerModel))
+                .ReturnsAsync(IdentityResult.Failed(new IdentityError { Description = errorDescription }));
+
+            // Act
+            var result = await controller.Register(registerModel) as ViewResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.False(controller.ModelState.IsValid);
+            Assert.Contains(errorDescription, controller.ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+        }
+
+     
+        [Fact]
+        public void Index_ReturnsIndexView()
+        {
+            // Arrange
+            var mockAccountService = new Mock<IAccountService>();
+            var controller = new AccountController(mockAccountService.Object);
+
+            // Act
+            var result = controller.Index() as ViewResult;
+
+            // Assert
+            Assert.NotNull(result);
+        }
+
+
+
     }
+}

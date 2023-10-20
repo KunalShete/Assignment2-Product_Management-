@@ -17,6 +17,7 @@ namespace ProductManagement.Controllers
             _userService = userService;
         }
 
+
         public IActionResult ViewUser()
         {
             var adminUserViewModels = _userService.GetAdminUsers();
@@ -39,13 +40,14 @@ namespace ProductManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Use the UserService to add the user
+                
                 _userService.AddUser(model);
                 return RedirectToAction("ViewUser");
             }
 
             return View(model);
         }
+
 
         [HttpGet]
         public IActionResult EditUser(string id)
@@ -71,9 +73,10 @@ namespace ProductManagement.Controllers
 
 
 
+
+
         public IActionResult DeleteUser(string id)
         {
-            // Use the UserService to delete the user
             _userService.DeleteUser(id);
             return RedirectToAction("ViewUser");
         }

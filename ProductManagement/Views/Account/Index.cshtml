@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="/css/Button.css">
 
 <style>
+
+
     .right h1 {
         font-size: 3rem;
         margin-bottom: 20px;
@@ -22,39 +24,16 @@
         color: inherit;
         cursor: auto;
     }
-
     .container {
+      
+
         display: flex;
-        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
         align-items: center;
         z-index: 20;
     }
 
-    .left img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    @@media screen and (min-width: 768px) {
-        .container {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .left {
-            flex-basis: 50%;
-        }
-
-        .right {
-            flex-basis: 50%;
-        }
-    }
 </style>
 
 <div class="container section">
@@ -65,8 +44,9 @@
     </div>
     <div class="right">
         <h1>Welcome to the Product Management System</h1>
-        <p>Effortlessly manage your products, all in one place. Log in or register to get started on your journey.</p>
+        <p>Effortlessly manage your products, all in one place.Log in or register to get started on your journey.</p>
 
+      
         <div class="buttons">
             <a href="@Url.Action("Login", "Account")" class="button">
                 <span></span>
@@ -84,5 +64,7 @@
                 Register
             </a>
         </div>
+
+
     </div>
 </div>

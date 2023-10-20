@@ -16,8 +16,6 @@ namespace ProductManagement.Data.Repositories.SuperAdmin
         IdentityResult DeleteAdminUser(string id);
 
 
-
-
         Task<IEnumerable<IdentityUser>> GetUsersAsync();
         Task<IdentityUser> GetUserByIdAsync(string id);
         Task<bool> UpdateUserAsync(IdentityUser user);

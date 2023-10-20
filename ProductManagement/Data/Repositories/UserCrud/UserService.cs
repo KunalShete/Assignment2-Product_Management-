@@ -63,17 +63,18 @@ namespace ProductManagement.Data.Repositories.UserCrud
             {
                 existingUser.Email = user.Email;
 
-                // Update other properties as needed
-               _userManager.UpdateAsync(existingUser);
+
+                _userManager.UpdateAsync(existingUser);
             }
         }
+
         public void DeleteUser(string id)
         {
             var identityUser = _userManager.FindByIdAsync(id).Result;
             if (identityUser != null)
             {
                 var result = _userManager.DeleteAsync(identityUser).Result;
-                // Handle the delete result as needed
+                
             }
         }
     }

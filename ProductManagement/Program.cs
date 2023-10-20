@@ -6,6 +6,7 @@ using ProductManagement.Data.Repositories.UserCrud;
 using ProductManagement.Data.Repositories.Account;
 using ProductManagement.Data.Repositories.SuperAdmin;
 using ProductManagement.Data.Repositories;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +14,8 @@ builder.Services.AddAuthentication();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationConnection"));
 });
-
 
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
@@ -30,7 +30,6 @@ builder.Services.AddAuthorization(options =>
         policy.RequireRole("SuperAdmin"));
 });
 
-/*builder.Services.AddScoped<IProductRepository, ProductRepository>();*/
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
@@ -41,7 +40,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
-    SeedData.Initialize(serviceProvider).Wait();
+    SeedData.Initialize(serviceProvider);
 }
 
 if (!app.Environment.IsDevelopment())

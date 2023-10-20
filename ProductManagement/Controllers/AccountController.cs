@@ -69,8 +69,8 @@ namespace ProductManagement.Controllers
                 var result = await _accountService.RegisterAsync(registerModel);
                 if (result.Succeeded)
                 {
-                    // Handle successful registration (e.g., redirect to a success page)
-                    return RedirectToAction("Login"); // Change to the appropriate action
+                   
+                    return RedirectToAction("Login"); 
                 }
                 else
                 {
@@ -103,5 +103,6 @@ namespace ProductManagement.Controllers
             return View();
         }
     }
+
 
 }

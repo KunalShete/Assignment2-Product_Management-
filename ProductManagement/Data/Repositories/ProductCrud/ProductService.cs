@@ -38,7 +38,7 @@ namespace ProductManagement.Data.Repositories.ProductCrud
             {
                 existingProduct.Name = product.Name;
                 existingProduct.Price = product.Price;
-                // Update other properties as needed
+               
                 _context.SaveChanges();
             }
         }
